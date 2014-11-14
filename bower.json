@@ -1,0 +1,21 @@
+{
+  "name": "onepage",
+  "version": "0.0.0",
+  "authors": [
+    "vjack070707@gmail.com"
+  ],
+  "description": "canner onepage",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./static/javascripts/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3"
+  }
+}
