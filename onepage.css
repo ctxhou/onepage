@@ -1,8 +1,8 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 6, scss/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,41 +25,34 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 27, scss/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, scss/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, scss/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, scss/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 40, scss/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, scss/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 1, scss/section/_content.scss */
 .section {
   display: block;
   position: relative;
@@ -67,12 +60,226 @@ table {
   height: 100vh;
 }
 
-/* line 5, scss/onepage.scss */
 .logo-img {
-  width: 100px;
+  height: 4em;
 }
 
-/* line 9, scss/onepage.scss */
-.logo-word {
+.logo-link {
   font-size: 1.5em;
+}
+
+header {
+  line-height: 4em;
+  background-color: #f7f7f7;
+  padding: 1%;
+}
+header li {
+  display: inline;
+  padding-left: 1em;
+}
+
+.logo {
+  float: left;
+  position: relative;
+}
+
+.header-choice {
+  float: right;
+  position: relative;
+}
+
+.header-choice-item {
+  display: inline;
+}
+
+.sidebar {
+  background-color: #515151;
+}
+.sidebar li {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+.content {
+  background-color: #898989;
+}
+
+.show-de {
+  display: none;
+}
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .show-de {
+    display: inline-block;
+  }
+}
+
+.show-ph {
+  display: none !important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .show-ph {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .hide-de {
+    display: none !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .hide-ph {
+    display: none !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1500px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (min-width: 1501px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+body {
+  font-family: "微軟正黑體","Microsoft Jhenghei",sans-serif,"Helvetica Neue",Arial,"Heiti TC","LiHei Pro" !important;
+}
+
+.onepage-wrapper {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  *zoom: 1;
+}
+.onepage-wrapper::before {
+  content: " ";
+  display: table;
+}
+.onepage-wrapper::after {
+  clear: both;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .onepage-wrapper {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onepage-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .onepage-wrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onepage-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .onepage-wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onepage-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 1501px) {
+  .onepage-wrapper {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .onepage-wrapper:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .sidebar {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    display: block;
+  }
+
+  .content {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1501px) {
+  .sidebar {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    display: block;
+  }
+
+  .content {
+    width: 74.57627%;
+    float: right;
+    margin-right: 0;
+  }
+}
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.left {
+  float: left;
 }
