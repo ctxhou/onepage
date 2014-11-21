@@ -104,6 +104,10 @@ header li {
   background-color: #898989;
 }
 
+main {
+  background-color: #eee;
+}
+
 .show-de {
   display: none;
 }
@@ -247,29 +251,15 @@ body {
   }
 }
 @media (min-width: 1025px) and (max-width: 1500px) {
-  .sidebar {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-    display: block;
-  }
-
   .content {
-    width: 74.57627%;
+    width: 100%;
     float: right;
     margin-right: 0;
   }
 }
 @media (min-width: 1501px) {
-  .sidebar {
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-    display: block;
-  }
-
   .content {
-    width: 74.57627%;
+    width: 100%;
     float: right;
     margin-right: 0;
   }
