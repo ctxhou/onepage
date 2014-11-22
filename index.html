@@ -7,8 +7,15 @@
         <meta name="description" content="onepage demo">
         <meta name="keywords" content="onepage demo">
         <script src="vendors/jquery.min.js"></script>
+        <script src="vendors/jquery.scrollTo.js"></script>
         <script src="js/jquery.onepage.js"></script>
         <link href="onepage.css" rel="stylesheet">
+        <style>
+            h1 {
+                font-size: 10em;
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -18,22 +25,28 @@
                     <a href="/" class="logo-link left">Logo</a>
                 </div>
                 <ul class="header-choice">
-                    <li class="header-choice-item"><a href="#first" class="header-choice-link">choice</a></li>
-                    <li class="header-choice-item"><a href="#second" class="header-choice-link">choice</a></li>
-                    <li class="header-choice-item"><a href="#third" class="header-choice-link">choice</a></li>
+                    <li class="header-choice-item"><a href="#first" class="header-choice-link">choice1</a></li>
+                    <li class="header-choice-item"><a href="#second" class="header-choice-link">choice2</a></li>
+                    <li class="header-choice-item"><a href="#third" class="header-choice-link">choice3</a></li>
                 </ul>
             </div>
         </header>
         <main>
-        <div class="onepage-wrapper">
-            <div id="onepage">
-            <section class="page_view" id="first">first view</section>
-            <section class="page_view" id="second">second view</section>
-            <section class="page_view" id="third">third view</section>
-        </div>
-    </div>
-    </main>
-</body>
+            <div class="onepage-wrapper" id="onepage-wrapper">
+                <div id="onepage">
+                    <section class="page_view" id="first">
+                        <h1>First View</h1>
+                    </section>
+                    <section class="page_view" id="second">
+                        <h1>Second View</h1>
+                    </section>
+                    <section class="page_view" id="third">
+                        <h1>Third View</h1>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
     <script>
         $("#onepage").onepage();
     </script>

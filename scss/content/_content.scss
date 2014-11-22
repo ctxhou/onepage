@@ -5,3 +5,22 @@
 main {
     background-color: #eee;
 }
+
+.page_view {
+    float: left;
+    overflow: hidden;
+}
+
+.height_full {
+    // position: absolute;
+    position: absolute;
+
+}
+
+#onepage {
+    position: relative;
+}
+
+.current_page {
+    position: relative;
+}
