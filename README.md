@@ -34,11 +34,29 @@ Set the header anchor link
 ```
 
 ### Initialization
+Default Initialization:
 
 ```javascript
 $("#onepage").onepage();
 ```
+Alter options:
 
+```javascript
+$("#onepage").onepage({
+    'resize': true,
+    'navLink': '.header-choice-link',
+    'sectionSelector': '.page_view'
+});
+```
+
+
+### Options
+
+| Options         | choice       | default             | exaplain                                   |
+|-----------------|--------------|---------------------|--------------------------------------------|
+| resize          | true / false | true                | true: page_view is full height; vice versa |
+| navLink         | class name   | .header-choice-link | customize your header link class           |
+| sectionSelector | class name   | .page_view          | customize your section view class          |
 ## Develop
 ### Environment
 
