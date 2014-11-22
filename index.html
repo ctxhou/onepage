@@ -7,6 +7,7 @@
         <meta name="description" content="onepage demo">
         <meta name="keywords" content="onepage demo">
         <script src="vendors/jquery.min.js"></script>
+        <script src="js/jquery.onepage.js"></script>
         <link href="onepage.css" rel="stylesheet">
     </head>
     <body>
@@ -24,18 +25,15 @@
             </div>
         </header>
         <main>
-          <div class="onepage-wrapper">
-     <!--         <nav class="sidebar">
-                 <ul>
-                     <li>nav1</li>
-                     <li>nav2</li>
-                     <li>nav3</li>
-                 </ul>
-             </nav> -->
-             <div class="content">
-                 content
-             </div>
-          </div>
-        </main>
-    </body>
+        <div class="onepage-wrapper">
+            <div id="onepage">
+            <section class="page_view">first view</section>
+            <!-- <section id="second" class="height_full">second view</section> -->
+        </div>
+    </div>
+    </main>
+</body>
+    <script>
+        $("#onepage").onepage();
+    </script>
 </html>
