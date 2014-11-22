@@ -35,7 +35,7 @@ Set the header anchor link
 
 ### Initialization
 
-```html
+```javascript
 $("#onepage").onepage();
 ```
 
