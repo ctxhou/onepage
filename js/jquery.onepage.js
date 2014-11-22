@@ -1,19 +1,17 @@
 ;(function($) {
     $.fn.onepage = function(options) {
-        var window_width;
         options = $.extend({
             'resize': true,
             'navLink': '.header-choice-link',
-            'sectionSelector': '.page_view',
-            'fullHeight': true
+            'sectionSelector': '.page_view'
         }, options);
 
-        adjustHeight();
+
         if (options.resize) {
             $(window).resize(function(){
                 header_height = $('header').outerHeight();
                 $(".height_full").css("height", $(window).height()-header_height);
-                window_width = $(window).with();
+                // window_width = $(window).with();
             });
         }
         // default; append class
@@ -22,7 +20,7 @@
             window_width = $(window).width();
             $(this).css("left", i * window_width);
         });
-        defaultSection();
+
         $(options.navLink).click(function() {
             $(options.navLink).removeClass('selected');
             $(this).addClass('selected');
@@ -45,5 +43,12 @@
             $("#onepage").css("width", 100*count+"%");
             $(".page_view").css("overflow", options.overflow)
         }
+
+        // initialization
+        this.each (function() {
+            adjustHeight();
+            defaultSection();
+        })
+        return this;
     };
 })(jQuery);
