@@ -1,0 +1,23 @@
+.show-de{
+    display: none;
+    @include breakpoint($desktop-pair) {
+        display: inline-block;
+    }
+}
+.show-ph{
+    display: none !important;
+    @include breakpoint($phone-pair) {
+        display: inline-block !important;
+    }
+}
+.hide-de{
+    @include breakpoint($desktop-pair) {
+        display: none !important;
+    }
+}
+.hide-ph{
+    // display: none;
+    @include breakpoint($phone-pair) {
+        display: none !important;
+    }
+}

@@ -1,0 +1,38 @@
+$header-height: 4em;
+
+.logo-img {
+    height: $header-height;
+}
+
+.logo-link {
+    font-size: 1.5em;
+}
+header {
+    line-height: $header-height;
+    background-color: #f7f7f7;
+    padding: 1%;
+    li {
+        display: inline;
+        padding-left: 1em;
+    }
+    // height: 10vh;
+}
+
+.logo {
+    float: left;
+    position: relative;
+}
+
+.header-choice {
+    float: right;
+    position: relative;
+}
+
+    .header-choice-item{
+        display: inline;
+        // float: left;
+    }
+
+.content {
+    // height: 80vh;
+}

@@ -1,0 +1,43 @@
+@import 'compass';
+@import "susy";
+@import "breakpoint";
+
+$susy: (
+    columns: 12,
+    gutters: 1/4,
+    use-custom: (rem: true),
+    container: content-box,
+    debug: (
+        // image: show,
+        color: rgba(#66f, .25),
+        output: background,
+        toggle: top right,
+    ),
+    global-box-sizing: border-box,
+    math: fluid,
+    gutter-position: after
+);
+// @include border-box-sizing;
+//alternative layout breakpoints
+
+//width variable
+$phone: 768px;
+$tablets: 1024px;
+$desktop: 1200px;
+$large-screen: 1500px;
+
+// mobile first
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+//layout
+$phone-pair: 0px 768px;
+$tablet-pair: 769px 1024px;
+$ph-ta-pair: 0px 1024px;
+$desktop-pair: 1025px 1500px;
+$large-pair: 1501px;
+
+//columns
+$phone-columns: 4;
+$total-columns  : 8;
+$desktop-columns: 12;

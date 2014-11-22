@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>onepage</title>
+        <meta name="description" content="onepage demo">
+        <meta name="keywords" content="onepage demo">
+        <script src="vendors/jquery.min.js"></script>
+        <script src="vendors/jquery.scrollTo.js"></script>
+        <script src="js/jquery.onepage.js"></script>
+        <link href="onepage.css" rel="stylesheet">
+        <style>
+            h1 {
+                font-size: 10em;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="onepage-wrapper">
+                <div class="logo">
+                    <!-- <img src="http://fakeimg.pl/100x50/" class="logo-img"> -->
+                    <a href="/" class="logo-link left">Logo</a>
+                </div>
+                <ul class="header-choice">
+                    <li class="header-choice-item"><a href="#first" class="header-choice-link">choice1</a></li>
+                    <li class="header-choice-item"><a href="#second" class="header-choice-link">choice2</a></li>
+                    <li class="header-choice-item"><a href="#third" class="header-choice-link">choice3</a></li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <div class="onepage-wrapper" id="onepage-wrapper">
+
+                <div id="onepage">
+                    <section class="page_view" id="first">
+                        <h1>First View</h1>
+                        <h2 style="text-align: center; font-size: 3em">this is horizon view demo. click header link would show the horizontal slide.</h2>
+                    </section>
+                    <section class="page_view" id="second">
+                        <h1>Second View</h1>
+                    </section>
+                    <section class="page_view" id="third">
+                        <h1>Third View</h1>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script>
+        $("#onepage").onepage();
+    </script>
+</html>
