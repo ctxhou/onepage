@@ -15,6 +15,8 @@ Simple way to create onepage website.
 
 ### HTML structure
 
+**Set one content in each page view**
+
 ```html
 <div class="onepage-wrapper" id="onepage-wrapper">
     <div id="onepage">
@@ -24,14 +26,34 @@ Simple way to create onepage website.
     </div>
 </div>
 ```
+**Set multi content in some page views**
+insert `page_content` class in page_view
 
-Set the header anchor link
+```html
+<div class="onepage-wrapper" id="onepage-wrapper">
+    <div id="onepage">
+        <section class="page_view" id="first"><h1>First View</h1></section>
+        <section class="page_view" id="second">
+            <div class="page_content" style="text-align:center">
+                <h1>second view first content</h1>
+            </div>
+            <div class="page_content" style="text-align:center">
+                <h1>second view second content</h1>
+            </div>
+        </section>
+        <section class="page_view" id="third"><h1>Third View</h1></section>
+    </div>
+</div>
+```
+
+**Set the header anchor link**
 
 ```html
 <a href="#first" class="header-choice-link">choice1</a>
 <a href="#second" class="header-choice-link">choice2</a>
 <a href="#third" class="header-choice-link">choice3</a>
 ```
+
 
 ### Initialization
 Default Initialization:
@@ -52,12 +74,13 @@ $("#onepage").onepage({
 
 ### Options
 
-| Options         | value       | default             | explain                                   |
-|-----------------|--------------|---------------------|--------------------------------------------|
-| resize          | true / false | true                | true: page_view is full height; vice versa |
-| navLink         | class name   | .header-choice-link | customize your header link class           |
-| sectionSelector | class name   | .page_view          | customize your section view class          |
-| bkg_color | [section color]   | [ ]         | customize your section color         |
+| Options         | value       | default             | explain                                   |example|
+|-----------------|--------------|---------------------|--------------------------------------------|--------------------------------------------|
+| resize          | true / false | true                | true: page_view is full height; vice versa ||
+| navLink         | class name   | .header-choice-link | customize your header link class           ||
+| sectionSelector | class name   | .page_view          | customize your section view class          ||
+| bkg_color | [section color]   | [ ]         | customize your section color         |[["#aaa","blue"], "tomato"]|
+
 
 ## Develop
 ### Environment
