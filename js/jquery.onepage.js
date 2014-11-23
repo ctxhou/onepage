@@ -14,7 +14,7 @@
                 window_height = $(window).height();
                 header_height = $('header').outerHeight();
                 $(".first_height").css("height", window_height-header_height);
-                $(".other_height").css("height", window_height)
+                $(".other_height").css("height", window_height);
                 // window_width = $(window).with();
             });
         }
@@ -47,7 +47,7 @@
             $(this).addClass('selected');
             current = $(this);
             $("#onepage-wrapper").scrollTo($(this).attr("href"), 800);
-
+            $("#onepage-wrapper").css('height', $($(this).attr("href")).height())
             return false; //prevent the anchor link
         });
 
@@ -56,6 +56,7 @@
             var header_height = $('header').outerHeight();
             $(".first_height").css("height", window_height-header_height);
             $(".other_height").css("height", window_height)
+            $("#onepage-wrapper").css('height', $(".page_view").first().height())
         }
 
         function defaultSection() {
