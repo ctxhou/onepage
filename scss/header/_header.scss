@@ -28,11 +28,46 @@ header {
     position: relative;
 }
 
+
+
+.toggle {
+    display: none;
+}
+@include breakpoint($phone) {
     .header-choice-item{
         display: inline;
-        // float: left;
+    }
+}
+@include breakpoint($phone-pair) {
+    .header-choice {
+        height: 40px;
+        display: none;
+        height: auto;
+        float: left;
+    }
+    .toggle {
+        position: relative;
+        width: 100%;
+        display: block;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .toggle::after{
+        content: "";
+        background: url('nav-icon.png') no-repeat;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+
     }
 
-.content {
-    // height: 80vh;
+    .header-choice-item {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 }

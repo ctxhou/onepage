@@ -1,11 +1,10 @@
 @import "normalize";
+@import "susy/grids";
+@import "susy/show_hide";
 @import "section/content";
 @import "header/header";
 @import "sidebar/sidebar";
 @import "content/content";
-@import "susy/grids";
-@import "susy/show_hide";
-
 
 html {
     @include breakpoint($phone-pair) {

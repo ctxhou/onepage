@@ -52,6 +52,36 @@ table {
   border-spacing: 0;
 }
 
+.show-de {
+  display: none;
+}
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .show-de {
+    display: inline-block;
+  }
+}
+
+.show-ph {
+  display: none !important;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .show-ph {
+    display: inline-block !important;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1500px) {
+  .hide-de {
+    display: none !important;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+  .hide-ph {
+    display: none !important;
+  }
+}
+
 .section {
   display: block;
   position: relative;
@@ -87,10 +117,49 @@ header li {
   position: relative;
 }
 
-.header-choice-item {
-  display: inline;
+.toggle {
+  display: none;
 }
 
+@media (min-width: 768px) {
+  .header-choice-item {
+    display: inline;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .header-choice {
+    height: 40px;
+    display: none;
+    height: auto;
+    float: left;
+  }
+
+  .toggle {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+  .toggle:hover {
+    cursor: pointer;
+  }
+
+  .toggle::after {
+    content: "";
+    background: url("nav-icon.png") no-repeat;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+
+  .header-choice-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
 .sidebar {
   background-color: #515151;
 }
@@ -121,36 +190,6 @@ main {
 
 .current_page {
   position: relative;
-}
-
-.show-de {
-  display: none;
-}
-@media (min-width: 1025px) and (max-width: 1500px) {
-  .show-de {
-    display: inline-block;
-  }
-}
-
-.show-ph {
-  display: none !important;
-}
-@media (min-width: 0px) and (max-width: 768px) {
-  .show-ph {
-    display: inline-block !important;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1500px) {
-  .hide-de {
-    display: none !important;
-  }
-}
-
-@media (min-width: 0px) and (max-width: 768px) {
-  .hide-ph {
-    display: none !important;
-  }
 }
 
 @media (min-width: 0px) and (max-width: 768px) {
