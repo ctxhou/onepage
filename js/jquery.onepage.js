@@ -3,7 +3,8 @@
         options = $.extend({
             'resize': true,
             'navLink': '.header-choice-link',
-            'sectionSelector': '.page_view'
+            'sectionSelector': '.page_view',
+            'bkg_color': []
         }, options);
 
 
@@ -19,6 +20,7 @@
             $(this).addClass('height_full');
             window_width = $(window).width();
             $(this).css("left", i * window_width);
+            $(this).css("background-color", options.bkg_color[i]);
         });
 
         $(options.navLink).click(function() {

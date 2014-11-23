@@ -120,6 +120,10 @@ main {
   position: relative;
 }
 
+#onepage-wrapper {
+  overflow: hidden;
+}
+
 .current_page {
   position: relative;
 }
