@@ -39,9 +39,16 @@
                     <section class="page_view" id="first">
                         <h1>First View</h1>
                         <h2 style="text-align: center; font-size: 3em">this is horizon view demo. click header link would show the horizontal slide.</h2>
+                        <hr>
+
                     </section>
-                    <section class="page_view" id="second" >
-                        <h1>Second View</h1>
+                    <section class="page_view" id="second">
+                        <div class="page_content" style="text-align:center">
+                            <h1>first view first content.<br>test content<br>hi!?<br>yo!!<br>hafid</h1>
+                        </div>
+                        <div class="page_content" style="text-align:center">
+                            <h1>first view second content.<br>test content<br>hi!?<br>yo!!<br>hafid</h1>
+                        </div>
                     </section>
                     <section class="page_view" id="third" >
                         <h1>Third View</h1>
@@ -55,8 +62,8 @@
     </body>
     <script>
         $("#onepage").onepage({
-            'resize': false,
-            'bkg_color': ['#aaa', "blue", "green", "yellow"]
+            'resize': true,
+            'bkg_color': ["#aaa", ["tomato","blue"], "green", "yellow"]
         });
     </script>
 </html>

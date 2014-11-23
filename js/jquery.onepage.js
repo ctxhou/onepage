@@ -4,23 +4,42 @@
             'resize': true,
             'navLink': '.header-choice-link',
             'sectionSelector': '.page_view',
+            'sectionContent': '.page_content',
             'bkg_color': []
         }, options);
 
-
+        var window_height;
         if (options.resize) {
             $(window).resize(function(){
+                window_height = $(window).height();
                 header_height = $('header').outerHeight();
-                $(".height_full").css("height", $(window).height()-header_height);
+                $(".first_height").css("height", window_height-header_height);
+                $(".other_height").css("height", window_height)
                 // window_width = $(window).with();
             });
         }
+
         // default; append class
         $(options.sectionSelector).each(function(i, v){
-            $(this).addClass('height_full');
+            // adjust each page view height
+            page_content = $(this).children(options.sectionContent);
+            console.log(page_content)
+            if (page_content.length == 0) {
+                $(this).addClass('first_height');
+                $(this).css("background-color", options.bkg_color[i]);
+            } else {
+                $.each(page_content, function(index, el) {
+                    $(this).css("background-color", options.bkg_color[i][index]);
+                    current = $(this);
+                    if (index == 0) {
+                        current.addClass('first_height');
+                    }else {
+                        current.addClass('other_height');
+                    }
+                });
+            }
             window_width = $(window).width();
             $(this).css("left", i * window_width);
-            $(this).css("background-color", options.bkg_color[i]);
         });
 
         $(options.navLink).click(function() {
@@ -33,8 +52,10 @@
         });
 
         function adjustHeight() {
+            window_height = $(window).height()
             var header_height = $('header').outerHeight();
-            $(".height_full").css("height", $(window).height()-header_height);
+            $(".first_height").css("height", window_height-header_height);
+            $(".other_height").css("height", window_height)
         }
 
         function defaultSection() {
