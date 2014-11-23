@@ -23,35 +23,40 @@
         <header>
             <div class="onepage-wrapper">
                 <div class="logo">
-                    <!-- <img src="http://fakeimg.pl/100x50/" class="logo-img"> -->
                     <a href="/" class="logo-link left">Logo</a>
                 </div>
                 <ul class="header-choice">
                     <li class="header-choice-item"><a href="#first" class="header-choice-link">choice1</a></li>
                     <li class="header-choice-item"><a href="#second" class="header-choice-link">choice2</a></li>
                     <li class="header-choice-item"><a href="#third" class="header-choice-link">choice3</a></li>
+                    <li class="header-choice-item"><a href="#fourth" class="header-choice-link">choice4</a></li>
                 </ul>
             </div>
         </header>
         <main>
-            <div class="onepage-wrapper" id="onepage-wrapper">
-
+            <div id="onepage-wrapper">
                 <div id="onepage">
                     <section class="page_view" id="first">
                         <h1>First View</h1>
                         <h2 style="text-align: center; font-size: 3em">this is horizon view demo. click header link would show the horizontal slide.</h2>
                     </section>
-                    <section class="page_view" id="second">
+                    <section class="page_view" id="second" >
                         <h1>Second View</h1>
                     </section>
-                    <section class="page_view" id="third">
+                    <section class="page_view" id="third" >
                         <h1>Third View</h1>
+                    </section>
+                    <section class="page_view" id="fourth" >
+                        <h1>Fourth View</h1>
                     </section>
                 </div>
             </div>
         </main>
     </body>
     <script>
-        $("#onepage").onepage();
+        $("#onepage").onepage({
+            'resize': false,
+            'bkg_color': ['#aaa', "blue", "green"]
+        });
     </script>
 </html>

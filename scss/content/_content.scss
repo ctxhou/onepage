@@ -8,7 +8,6 @@ main {
 
 .page_view {
     float: left;
-    overflow: hidden;
 }
 
 .height_full {
@@ -19,6 +18,10 @@ main {
 
 #onepage {
     position: relative;
+}
+
+#onepage-wrapper {
+    overflow: hidden;
 }
 
 .current_page {
