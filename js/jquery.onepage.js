@@ -9,12 +9,14 @@
         }, options);
 
         var window_height;
+        var $page_view;
         if (options.resize) {
             $(window).resize(function(){
                 window_height = $(window).height();
                 header_height = $('header').outerHeight();
                 $(".first_height").css("height", window_height-header_height);
                 $(".other_height").css("height", window_height);
+                $("#onepage-wrapper").css('height', $page_view.height())
                 // window_width = $(window).with();
             });
         }
@@ -44,10 +46,12 @@
 
         $(options.navLink).click(function() {
             $(options.navLink).removeClass('selected');
+            $page_view = $($(this).attr("href"));
+
             $(this).addClass('selected');
             current = $(this);
             $("#onepage-wrapper").scrollTo($(this).attr("href"), 800);
-            $("#onepage-wrapper").css('height', $($(this).attr("href")).height())
+            $("#onepage-wrapper").css('height', $page_view.height())
             return false; //prevent the anchor link
         });
 
@@ -55,8 +59,9 @@
             window_height = $(window).height()
             var header_height = $('header').outerHeight();
             $(".first_height").css("height", window_height-header_height);
-            $(".other_height").css("height", window_height)
-            $("#onepage-wrapper").css('height', $(".page_view").first().height())
+            $(".other_height").css("height", window_height);
+            $page_view = $(".page_view").first();
+            $("#onepage-wrapper").css('height', $page_view.height());
         }
 
         function defaultSection() {
@@ -65,7 +70,7 @@
             var count = $(options.sectionSelector).length;
             $(options.sectionSelector).css("width", 100/count+"%");
             $("#onepage").css("width", 100*count+"%");
-            $(".page_view").css("overflow", options.overflow)
+            $(".page_view").css("overflow", options.overflow);
         }
 
         // initialization
