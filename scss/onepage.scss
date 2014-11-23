@@ -28,7 +28,18 @@ $phone-container: $phone;
 $tablet-container: $tablets;
 $desktop-container: $desktop;
 $large-container: $large-screen;
+.clear {
+    &::before, &::after{
+        content: " ";
+        display: table;
+    }
 
+    &::after {
+        clear: both;
+    }
+
+    *zoom: 1;
+}
 .onepage-wrapper{
     &::before{
         content: " ";

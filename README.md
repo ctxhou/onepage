@@ -27,6 +27,7 @@ Simple way to create onepage website.
 </div>
 ```
 **Set multi content in some page views**
+
 insert `page_content` class in page_view
 
 ```html
@@ -34,10 +35,10 @@ insert `page_content` class in page_view
     <div id="onepage">
         <section class="page_view" id="first"><h1>First View</h1></section>
         <section class="page_view" id="second">
-            <div class="page_content" style="text-align:center">
+            <div class="page_content">
                 <h1>second view first content</h1>
             </div>
-            <div class="page_content" style="text-align:center">
+            <div class="page_content">
                 <h1>second view second content</h1>
             </div>
         </section>
@@ -67,7 +68,8 @@ Alter options:
 $("#onepage").onepage({
     'resize': true,
     'navLink': '.header-choice-link',
-    'sectionSelector': '.page_view'
+    'sectionSelector': '.page_view',
+    'bg_color': '["yellow", "blue"]'
 });
 ```
 
