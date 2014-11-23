@@ -57,6 +57,8 @@ $("#onepage").onepage({
 | resize          | true / false | true                | true: page_view is full height; vice versa |
 | navLink         | class name   | .header-choice-link | customize your header link class           |
 | sectionSelector | class name   | .page_view          | customize your section view class          |
+| bkg-color | [section color]   | [ ]         | customize your section color         |
+
 ## Develop
 ### Environment
 
